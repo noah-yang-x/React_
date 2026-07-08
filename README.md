@@ -33,8 +33,22 @@ If that port is busy, Vite can use another port.
 
 ## GitHub Pages
 
-The production site is published from `main` by GitHub Actions:
+The production site URL is:
 
 ```text
 https://noah-yang-x.github.io/React_/
+```
+
+Publishing flow:
+
+1. Push `main`.
+2. GitHub Actions builds the Vite app.
+3. The generated `dist` output is published to the `gh-pages` branch.
+
+In the repository's GitHub Pages settings, use:
+
+```text
+Source: Deploy from a branch
+Branch: gh-pages
+Folder: / (root)
 ```
